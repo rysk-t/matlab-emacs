@@ -872,8 +872,8 @@ Customizing this variable is only useful if `regexp-opt' is available."
   :group 'matlab
   :type '(repeat (string :tag "Keyword: ")))
 
-(defcustom matlab-handle-graphics-list '("figure" "axes" "axis" "line"
-					"surface" "patch" "text" "light"
+(defcustom matlab-handle-graphics-list '("close" "figure" "gcf" "clf" "axes" "axis" "line"
+					"surface" "patch" "rectangle" "text" "light"
 					"image" "set" "get" "uicontrol"
 					"uimenu" "uitoolbar"
 					"uitoggletool" "uipushtool"
