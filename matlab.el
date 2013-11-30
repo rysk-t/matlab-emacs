@@ -872,8 +872,8 @@ Customizing this variable is only useful if `regexp-opt' is available."
   :group 'matlab
   :type '(repeat (string :tag "Keyword: ")))
 
-(defcustom matlab-handle-graphics-list '("figure" "axes" "axis" "line"
-					"surface" "patch" "text" "light"
+(defcustom matlab-handle-graphics-list '("close" "figure" "gcf" "clf" "axes" "axis" "line"
+					"surface" "patch" "rectangle" "text" "light"
 					"image" "set" "get" "uicontrol"
 					"uimenu" "uitoolbar"
 					"uitoggletool" "uipushtool"
@@ -951,7 +951,7 @@ Customizing this variable is only useful if `regexp-opt' is available."
     (if (fboundp 'regexp-opt)
 	(concat "\\<\\(" (regexp-opt matlab-handle-graphics-list) "\\)\\>")
       ;; The original regular expression for pre Emacs 20.1
-      "\\<\\(ax\\(es\\|is\\)\\|figure\\|get\\|image\\|li\\(ght\\|ne\\)\\|\
+      "\\<\\(ax\\(es\\|is\\)\\|figure\\|get\\|gcf\\|close\\|clf\\|rectangle\\|image\\|li\\(ght\\|ne\\)\\|\
 patch\\|s\\(et\\(\\|color\\|font\\)\\|urface\\)\\|text\\|\
 ui\\(cont\\(ext\\(\\|menu\\)\\|rol\\)\\|menu\\|\
 \\(toggle\\|push\\)tool\\|toolbar\\)\\)\\>")
