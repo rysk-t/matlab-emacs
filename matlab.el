@@ -955,7 +955,7 @@ Customizing this variable is only useful if `regexp-opt' is available."
 patch\\|s\\(et\\(\\|color\\|font\\)\\|urface\\)\\|text\\|\
 ui\\(cont\\(ext\\(\\|menu\\)\\|rol\\)\\|menu\\|\
 \\(toggle\\|push\\)tool\\|toolbar\\)\\)\\>")
-    '(0 font-lock-type-face))
+    '(0 font-lock-builtin-face));Describe face (default `font-lock-builtin-face'): 
    )
   "Expressions to highlight in MATLAB mode.")
 
