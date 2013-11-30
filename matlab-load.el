@@ -3,8 +3,8 @@
 ;;; Code:
 
 
-;;;### (autoloads (matlab-cedet-setup) "cedet-matlab" "cedet-matlab.el"
-;;;;;;  (20289 22770))
+;;;### (autoloads nil "cedet-matlab" "cedet-matlab.el" (21146 11904
+;;;;;;  0 0))
 ;;; Generated autoloads from cedet-matlab.el
 
 (autoload 'matlab-cedet-setup "cedet-matlab" "\
@@ -14,8 +14,8 @@ Update various paths to get SRecode to identify our macros.
 
 ;;;***
 
-;;;### (autoloads (company-matlab-shell) "company-matlab-shell" "company-matlab-shell.el"
-;;;;;;  (19026 24680))
+;;;### (autoloads nil "company-matlab-shell" "company-matlab-shell.el"
+;;;;;;  (21146 11902 0 0))
 ;;; Generated autoloads from company-matlab-shell.el
 
 (autoload 'company-matlab-shell "company-matlab-shell" "\
@@ -25,8 +25,7 @@ A `company-mode' completion back-end for Matlab-Shell.
 
 ;;;***
 
-;;;### (autoloads (enable-visual-studio-bookmarks) "linemark" "linemark.el"
-;;;;;;  (20826 5574))
+;;;### (autoloads nil "linemark" "linemark.el" (20362 59690 0 0))
 ;;; Generated autoloads from linemark.el
 
 (autoload 'enable-visual-studio-bookmarks "linemark" "\
@@ -41,8 +40,7 @@ Bind the viss bookmark functions to F2 related keys.
 
 ;;;***
 
-;;;### (autoloads (matlab-shell matlab-mode) "matlab" "matlab.el"
-;;;;;;  (20296 56816))
+;;;### (autoloads nil "matlab" "matlab.el" (21146 11898 0 0))
 ;;; Generated autoloads from matlab.el
 
 (add-to-list 'auto-mode-alist '("\\.m$" . matlab-mode))
@@ -113,7 +111,7 @@ a console application.
 
 ;;;***
 
-;;;### (autoloads (mlint-minor-mode) "mlint" "mlint.el" (20289 22301))
+;;;### (autoloads nil "mlint" "mlint.el" (21146 11900 0 0))
 ;;; Generated autoloads from mlint.el
 
 (autoload 'mlint-minor-mode "mlint" "\
@@ -125,8 +123,8 @@ With prefix ARG, turn mlint minor mode on iff ARG is positive.
 
 ;;;***
 
-;;;### (autoloads (semantic-default-matlab-setup) "semantic-matlab"
-;;;;;;  "semantic-matlab.el" (20826 10858))
+;;;### (autoloads nil "semantic-matlab" "semantic-matlab.el" (21146
+;;;;;;  11905 0 0))
 ;;; Generated autoloads from semantic-matlab.el
 
 (autoload 'semantic-default-matlab-setup "semantic-matlab" "\
@@ -136,7 +134,7 @@ Set up a buffer for parsing of MATLAB files.
 
 ;;;***
 
-;;;### (autoloads (tlc-mode) "tlc" "tlc.el" (17295 18976))
+;;;### (autoloads nil "tlc" "tlc.el" (21146 11904 0 0))
 ;;; Generated autoloads from tlc.el
 
 (autoload 'tlc-mode "tlc" "\
@@ -148,7 +146,7 @@ Major mode for editing Tlc files, or files found in tlc directories.
 ;;;***
 
 ;;;### (autoloads nil nil ("matlab-publish.el" "semanticdb-matlab.el")
-;;;;;;  (20826 10866 333040))
+;;;;;;  (21146 14173 656089 0))
 
 ;;;***
 
