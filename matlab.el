@@ -54,6 +54,7 @@
 (require 'easymenu)
 (require 'tempo)
 (require 'derived)
+(require 'matlab-highlight-cellbreak)
 
 ;; compatibility
 (if (string-match "X[Ee]macs" emacs-version)
@@ -502,11 +503,10 @@ If font lock is not loaded, lay in wait."
                        :slant  'italic)))
           "*Face to use for cross-function variables."
 	  :group 'matlab)
-	(defface matlab-cellbreak-face
+	(defface matlab-cellbreak-face ;; TODO: wanna hilight cellbreak
 	  (list
 	   (list t
-		 (list :background (face-background font-lock-comment-face)
-		       :foreground (face-foreground font-lock-comment-face)
+		 (list :foreground (face-foreground font-lock-comment-face)
 		       :overline t
 		       :bold t)))
 	  "*Face to use for cellbreak %% lines.")
