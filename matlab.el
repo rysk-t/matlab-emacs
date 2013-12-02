@@ -5236,6 +5236,15 @@ This command requires an active MATLAB shell."
   (let ((doc (matlab-shell-collect-command-output command)))
     (matlab-output-to-temp-buffer "*MATLAB Help*" doc)))
 
+(defun matlab-shell-run-whos () ;add <rysk.takeuchi[at]gmail.com>
+  "Run COMMAND and display result in a buffer.
+This command requires an active MATLAB shell."
+  (interactive) ;; (list (read-from-minibuffer
+  		;;       "MATLAB command line: "
+  		;;       (cons (matlab-read-line-at-point) 0))))
+  (let ((doc (matlab-shell-collect-command-output "whos")))
+    (matlab-output-to-temp-buffer "*MATLAB Help*" doc)))
+
 (defun matlab-shell-describe-variable (variable)
   "Get the contents of VARIABLE and display them in a buffer.
 This uses the WHOS (MATLAB 5) command to find viable commands.
