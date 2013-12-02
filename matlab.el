@@ -50,11 +50,9 @@
 ;; blocks of code from the buffer you are editing.
 
 ;;; Code:
-
 (require 'easymenu)
 (require 'tempo)
 (require 'derived)
-(require 'matlab-highlight-cellbreak)
 
 ;; compatibility
 (if (string-match "X[Ee]macs" emacs-version)
