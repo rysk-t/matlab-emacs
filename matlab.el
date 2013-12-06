@@ -53,6 +53,8 @@
 (require 'easymenu)
 (require 'tempo)
 (require 'derived)
+(require 'matlab-highlight-cellbreak)
+;(require 'matlab-goto-next-cellbreak)
 
 ;; compatibility
 (if (string-match "X[Ee]macs" emacs-version)

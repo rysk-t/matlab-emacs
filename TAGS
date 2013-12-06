@@ -1,0 +1,531 @@
+
+cedet-matlab.el,35
+(defun matlab-cedet-setup 29,1035
+
+company-matlab-shell.el,179
+(defun company-matlab-shell-tab 25,956
+(defun company-matlab-shell-grab-symbol 52,2021
+(defun company-matlab-shell-get-completions 68,2561
+(defun company-matlab-shell 73,2762
+
+linemark.el,1089
+(defgroup linemark 77,3164
+(defface linemark-stop-face 86,3360
+(defface linemark-caution-face 93,3604
+(defface linemark-go-face 100,3850
+(defface linemark-funny-face 107,4093
+(defclass linemark-entry 116,4343
+(defclass linemark-group 136,5092
+(defvar linemark-groups 154,5626
+(defun linemark-create-group 157,5693
+(defun linemark-new-group 165,6001
+(defun linemark-at-point 187,6724
+(defun linemark-next-in-buffer 205,7319
+(defmethod linemark-add-entry 242,8480
+(defmethod linemark-new-entry 270,9501
+(defmethod linemark-display 277,9738
+(defmethod linemark-display 282,9935
+(defmethod linemark-delete 318,11301
+(defmethod linemark-delete 323,11487
+(defmethod linemark-begin 329,11688
+(defmethod linemark-end 334,11843
+(defun linemark-find-file-hook 346,12270
+(defun linemark-kill-buffer-hook 350,12432
+(defvar viss-bookmark-group 365,12925
+(defun viss-bookmark-toggle 368,13035
+(defun viss-bookmark-next-buffer 376,13271
+(defun viss-bookmark-prev-buffer 382,13479
+(defun viss-bookmark-clear-all-buffer 388,13688
+(defun enable-visual-studio-bookmarks 435,15206
+
+matlab-highlight-cellbreak.el,39
+(defun matlab-highlight-cellbreak 1,0
+
+matlab-publish.el,885
+(defvar matlab-temp-region-file 123,3882
+(defvar matlab-show-matlab-shell 126,4007
+(defun matlab-select-publish-form 130,4123
+(defun matlab-publish-file-latex 139,4522
+(defun matlab-publish-file-html 149,4832
+(defun matlab-select-environment 159,5139
+(defun matlab-insert-title 173,5952
+(defun matlab-insert-section 180,6091
+(defun matlab-insert-description-text 187,6221
+(defun matlab-boldify 196,6373
+(defun matlab-insert-bold-text 212,6832
+(defun matlab-insert-monospaces-text 219,6970
+(defun matlab-insert-preformated-text 227,7121
+(defun matlab-insert-equation 237,7327
+(defun matlab-insert-bullet-list 247,7511
+(defun matlab-write-region 260,7711
+(defun matlab-write-region-novisit 266,7910
+(defun matlab-publish-region-old 273,8068
+(defun matlab-publish-region 282,8464
+(defun matlab-publish-region-latex 292,8893
+(defun matlab-publish-region-html 300,9118
+
+matlab.el,15545
+(defconst matlab-mode-version 10,271
+(defmacro matlab-run-in-matlab-mode-only 110,4442
+(defun matlab-with-emacs-link 117,4696
+(defgroup matlab 126,5001
+(defcustom matlab-indent-level 131,5084
+(defcustom matlab-cont-level 136,5205
+(defcustom matlab-cont-requires-ellipsis 141,5345
+(defcustom matlab-case-level 148,5633
+(defcustom matlab-indent-function-body 165,6340
+(defcustom matlab-functions-have-end 184,7135
+(defun matlab-toggle-functions-have-end 191,7334
+(defun matlab-do-functions-have-end-p 210,8053
+(defun matlab-toggle-functions-have-end-minor-mode 225,8484
+(defun matlab-indent-function-body-p 233,8866
+(defcustom matlab-indent-past-arg1-functions243,9249
+(defcustom matlab-arg1-max-indent-length 252,9592
+(defcustom matlab-maximum-indents 257,9833
+(defcustom matlab-handle-simulink 274,10563
+(defcustom matlab-auto-fill 282,10853
+(defcustom matlab-fill-fudge 287,10995
+(defcustom matlab-fill-fudge-hard-maximum 298,11519
+(defcustom matlab-elipsis-string 305,11773
+(defcustom matlab-fill-code 309,11925
+(defcustom matlab-fill-count-ellipsis-flag 314,12071
+(defcustom matlab-fill-strings-flag 319,12264
+(defcustom matlab-comment-column 324,12506
+(defcustom matlab-comment-anti-indent 329,12633
+(defcustom matlab-comment-line-s 334,12782
+(defcustom matlab-comment-on-line-s 339,12903
+(defcustom matlab-comment-region-s 344,13027
+(defcustom matlab-verify-on-save-flag 350,13191
+(defcustom matlab-mode-verify-fix-functions355,13323
+(defcustom matlab-block-verify-max-buffer-size 368,13816
+(defcustom matlab-vers-on-startup 374,14005
+(defcustom matlab-highlight-block-match-flag 379,14132
+(defcustom matlab-show-periodic-code-details-flag 386,14358
+(defcustom matlab-use-eei 392,14578
+(defcustom matlab-mode-hook 397,14694
+(defcustom matlab-completion-technique 402,14815
+(defcustom matlab-show-mlint-warnings 417,15421
+(defcustom matlab-highlight-cross-function-variables 424,15595
+(defcustom matlab-return-add-semicolon 431,15814
+(defvar matlab-unterminated-string-face 457,16693
+(defvar matlab-simulink-keyword-face 460,16817
+(defvar matlab-nested-function-keyword-face 463,16928
+(defvar matlab-cross-function-variable-face 466,17064
+(defvar matlab-cellbreak-face 469,17196
+(defun matlab-font-lock-adjustments 472,17286
+(defvar matlab-tempo-tags 564,20477
+(defvar matlab-mode-syntax-table568,20568
+(defvar matlab-mode-special-syntax-table588,21276
+(defvar matlab-mode-abbrev-table 596,21546
+(define-abbrev-table 'matlab-mode-abbrev-table matlab-mode-abbrev-table599,21637
+(defvar matlab-help-map603,21771
+(defvar matlab-insert-map613,22163
+(defvar matlab-mode-map632,22974
+(defvar matlab-string-start-regexp 673,25180
+(defvar matlab-string-end-regexp 680,25579
+(defun matlab-font-lock-string-match-normal 685,25835
+(defun matlab-font-lock-string-match-unterminated 694,26157
+(defun matlab-font-lock-string-match-here 701,26456
+(defun matlab-font-lock-comment-match 724,27149
+(defun matlab-find-unreachable-code 740,27627
+(defun matlab-font-lock-nested-function-keyword-match 786,29081
+(defun matlab-font-lock-cross-function-variables-match 813,30144
+(defun matlab-find-block-comments 837,30932
+(defcustom matlab-keyword-list 862,31611
+(defcustom matlab-handle-graphics-list 875,32103
+(defcustom matlab-debug-list 887,32597
+(defvar matlab-font-lock-keywords896,32958
+(defconst matlab-function-arguments962,36106
+(defvar matlab-gaudy-font-lock-keywords965,36186
+(defvar matlab-really-gaudy-font-lock-keywords1013,38354
+(defvar matlab-shell-font-lock-keywords1056,40105
+(defvar matlab-imenu-generic-expression1080,41070
+(defun matlab-mode 1092,41462
+(defun matlab-show-version 1284,49511
+(defun matlab-find-prev-line 1289,49664
+(defun matlab-prev-line 1296,49878
+(defun matlab-uniquafy-list 1302,50077
+(defmacro matlab-navigation-syntax 1322,50742
+(defun matlab-up-list 1337,51258
+(defun matlab-valid-end-construct-p 1364,52174
+(defconst matlab-defun-regex 1413,53887
+(defconst matlab-mcos-regexp 1416,54027
+(defcustom matlab-block-indent-tic-toc-flag 1419,54163
+(defconst matlab-block-beg-pre-if1425,54367
+(defconst matlab-block-beg-pre-no-if1434,54728
+(defun matlab-block-beg-pre 1443,55070
+(defconst matlab-block-mid-pre1449,55270
+(defconst matlab-block-end-pre-if1453,55400
+(defconst matlab-block-end-pre-no-if1459,55666
+(defun matlab-block-end-pre 1465,55883
+(defconst matlab-endless-blocks1476,56219
+(defun matlab-block-re 1483,56495
+(defun matlab-block-scan-re 1491,56757
+(defun matlab-block-beg-re 1497,56958
+(defun matlab-block-mid-re 1501,57090
+(defun matlab-block-end-re 1505,57226
+(defun matlab-block-end-no-function-re 1509,57361
+(defun matlab-endless-blocks-re 1513,57524
+(defun matlab-match-function-re 1517,57673
+(defconst matlab-cline-start-skip 1526,58094
+(defvar matlab-keywords-solo1531,58283
+(defvar matlab-keywords-return1535,58512
+(defvar matlab-keywords-boolean1542,58851
+(defvar matlab-core-properties1548,59122
+(defvar matlab-property-lists1555,59435
+(defvar matlab-unknown-type-commands1635,63763
+(defun matlab-all-known-properties 1639,63886
+(defvar matlab-all-known-properties 1648,64138
+(defmacro matlab-property-function 1651,64244
+(defvar matlab-scan-on-screen-only 1662,64589
+(defun matlab-backward-sexp 1667,64804
+(defun matlab-forward-sexp 1712,66521
+(defun matlab-indent-sexp 1756,68597
+(defun matlab-beginning-of-enclosing-defun 1761,68771
+(defun matlab-beginning-of-defun 1777,69292
+(defun matlab-end-of-defun 1785,69588
+(defun matlab-current-defun 1795,69877
+(defun matlab-beginning-of-command 1804,70111
+(defun matlab-end-of-command 1829,71075
+(defun matlab-ltype-empty 1855,72166
+(defun matlab-ltype-comm 1861,72321
+(defun matlab-ltype-comm-ignore 1875,72748
+(defun matlab-ltype-help-comm 1881,72977
+(defun matlab-ltype-block-comm 1891,73278
+(defun matlab-ltype-endfunction-comm 1900,73545
+(defun matlab-ltype-continued-comm 1916,74009
+(defun matlab-ltype-function-definition 1935,74582
+(defun matlab-ltype-code 1941,74765
+(defun matlab-lattr-comm 1945,74924
+(defun matlab-lattr-implied-continuation 1949,75066
+(defun matlab-lattr-cont 1974,75759
+(defun matlab-lattr-array-cont 1993,76546
+(defun matlab-lattr-array-end 2004,76923
+(defun matlab-lattr-block-cont 2011,77169
+(defun matlab-lattr-middle-block-cont 2037,77985
+(defun matlab-lattr-endless-block-cont 2054,78532
+(defun matlab-lattr-block-close 2064,78842
+(defun matlab-lattr-local-end 2098,79863
+(defun matlab-lattr-semantics 2105,80105
+(defun matlab-function-called-at-point 2130,80911
+(defun matlab-cursor-in-string-or-comment 2141,81287
+(defun matlab-cursor-in-comment 2175,82433
+(defun matlab-cursor-in-string 2193,83081
+(defun matlab-comment-on-line 2242,84770
+(defun matlab-indent-line 2260,85400
+(defun matlab-calc-indent 2276,85834
+(defconst matlab-functions-have-end-should-be-true2288,86313
+(defun matlab-calculate-indentation 2292,86517
+(defun matlab-calculate-indentation-1 2304,87088
+(defun matlab-next-line-indentation 2528,95231
+(defcustom matlab-return-function 2591,98056
+(defun matlab-return 2604,98491
+(defun matlab-plain-ret 2610,98644
+(defun matlab-indent-after-ret 2615,98725
+(defun matlab-indent-end-before-ret 2621,98839
+(defun matlab-semicolon-on-return 2634,99223
+(defun matlab-indent-before-ret 2652,99805
+(defun matlab-linefeed 2659,99967
+(defun matlab-comment-return 2667,100178
+(defun matlab-comm-from-prev 2680,100594
+(defun matlab-electric-comment 2695,101141
+(defun matlab-comment 2708,101557
+(defun matlab-comment-line-break-function 2737,102481
+(defun matlab-comment-indent 2749,102913
+(defun matlab-comment-region 2753,103014
+(defun matlab-uncomment-region 2779,104083
+(defun matlab-set-comm-fill-prefix 2787,104377
+(defun matlab-set-comm-fill-prefix-post-code 2802,104839
+(defun matlab-reset-fill-prefix 2807,105003
+(defun matlab-find-convenient-line-break 2811,105094
+(defun matlab-auto-fill 2927,109071
+(defun matlab-join-comment-lines 3017,111998
+(defun matlab-fill-region 3028,112443
+(defun matlab-fill-comment-line 3043,113001
+(defun matlab-justify-line 3077,114167
+(defun matlab-fill-paragraph 3085,114354
+(defun matlab-find-recent-variable-list 3166,117139
+(defvar matlab-most-recent-variable-list 3230,119313
+(defun matlab-find-recent-variable 3233,119409
+(defun matlab-find-user-functions-list 3250,120050
+(defvar matlab-user-function-list 3282,121020
+(defun matlab-find-user-functions 3285,121108
+(defvar matlab-generic-list-placeholder 3301,121652
+(defun matlab-generic-list-expand 3305,121794
+(defun matlab-solo-completions 3328,122563
+(defun matlab-value-completions 3333,122789
+(defun matlab-boolean-completions 3338,123019
+(defun matlab-property-completions 3343,123255
+(defvar matlab-last-prefix 3368,124319
+(defvar matlab-last-semantic 3371,124445
+(defvar matlab-completion-search-state 3374,124579
+(defun matlab-complete-symbol 3377,124671
+(defun matlab-insert-end-block 3482,128706
+(defun matlab-insert-next-case 3568,130477
+(defun matlab-stringify-region 3616,132030
+(defun matlab-ispell-strings-region 3636,132719
+(defun matlab-ispell-strings 3648,133166
+(defun matlab-ispell-comments 3654,133375
+(defun matlab-generate-latex 3669,133941
+(defvar matlab-block-highlighter-timer 3694,134667
+(defun matlab-enable-block-highlighting 3697,134762
+(defvar matlab-block-highlight-overlay 3719,135609
+(defvar matlab-block-highlight-timer 3723,135749
+(defun matlab-start-block-highlight-timer 3727,135875
+(defun matlab-highlight-block-match 3744,136492
+(defun matlab-hideshow-forward-sexp-func 3807,138806
+(defun matlab-hideshow-adjust-beg-func 3814,139009
+(defun matlab-mode-verify-fix-file-fn 3837,139614
+(defun matlab-mode-verify-fix-file 3845,139878
+(defun matlab-toggle-show-mlint-warnings 3860,140375
+(defun matlab-toggle-highlight-cross-function-variables 3874,140933
+(defun matlab-mode-vf-functionname 3892,141677
+(defun matlab-mode-vf-block-matches-forward 3923,142846
+(defun matlab-mode-vf-block-matches-backward 3952,143945
+(defun matlab-mode-highlight-ask 3978,144990
+(defvar matlab-quiesce-nosemi-regexp 3996,145735
+(defun matlab-mode-vf-quiesce-buffer 4001,146007
+(defvar matlab-mode-menu-keymap 4042,147376
+(defun matlab-frame-init 4045,147464
+(defgroup matlab-shell 4156,152326
+(defcustom matlab-shell-command 4161,152421
+(defcustom matlab-shell-command-switches 4166,152579
+(defcustom matlab-shell-echoes 4172,152822
+(defvar matlab-shell-running-matlab-version 4177,152942
+(defvar matlab-shell-running-matlab-release 4179,153063
+(defvar matlab-shell-use-emacs-toolbox4181,153185
+(defvar matlab-shell-emacsclient-command 4188,153538
+(defcustom matlab-shell-history-file 4193,153751
+(defcustom matlab-shell-input-ring-size 4198,153976
+(defcustom matlab-shell-enable-gud-flag 4203,154102
+(defcustom matlab-shell-mode-hook 4208,154252
+(defcustom matlab-shell-ask-MATLAB-for-completions 4213,154391
+(defvar matlab-shell-buffer-name 4221,154690
+(defun matlab-shell-active-p 4225,154827
+(defvar matlab-shell-mode-map 4233,155111
+(defvar matlab-shell-font-lock-keywords-14236,155186
+(defvar matlab-shell-font-lock-keywords-24240,155343
+(defvar matlab-shell-font-lock-keywords-34244,155517
+(defvar matlab-prompt-seen 4249,155708
+(defun matlab-shell 4255,155882
+(defcustom matlab-shell-logo4349,159416
+(defun matlab-shell-hack-logo 4360,159746
+(defun matlab-shell-version-scrape 4376,160337
+(defun matlab-shell-mode 4394,161115
+(defvar gud-matlab-marker-regexp-prefix 4521,166582
+(defvar matlab-shell-html-map4524,166713
+(defvar matlab-anchor-beg 4534,167057
+(defvar matlab-anchor-end 4537,167160
+(defun matlab-shell-render-html-anchor 4540,167219
+(defvar matlab-txt-format-beg 4567,168446
+(defvar matlab-txt-format-end 4570,168553
+(defun matlab-shell-render-html-txt-format 4574,168691
+(defvar gud-matlab-error-regexp4616,170452
+(defvar matlab-shell-last-error-anchor 4622,170725
+(defvar matlab-shell-last-anchor-as-frame 4624,170815
+(defun matlab-shell-render-errors-as-anchor 4628,170967
+(defvar gud-matlab-marker-regexp-1 4667,172538
+(defvar gud-matlab-marker-regexp-24670,172637
+(defun gud-matlab-massage-args 4677,173009
+(defun gud-matlab-marker-filter 4683,173203
+(defun gud-matlab-find-file 4785,177222
+(defun matlab-shell-next-matching-input-from-input 4799,177592
+(defun matlab-shell-previous-matching-input-from-input 4804,177790
+(defun matlab-shell-delete-backwards-no-prompt 4820,178440
+(defun matlab-shell-completion-list 4834,178936
+(defun matlab-shell-which-fcn 4864,180085
+(defun matlab-shell-matlabroot 4894,181018
+(defvar matlab-shell-window-exists-for-display-completion-flag 4918,181751
+(defun matlab-shell-tab 4921,181918
+(defun matlab-shell-tab-hide-completions 4992,184738
+(defun matlab-show-matlab-shell-buffer 5011,185417
+(defvar matlab-shell-save-and-go-history 5019,185714
+(defun matlab-shell-add-to-input-history 5022,185822
+(defun matlab-shell-save-and-go 5037,186527
+(defun matlab-shell-run-region 5073,187787
+(defun matlab-shell-run-cell 5131,189760
+(defun matlab-shell-run-region-or-line 5150,190394
+(defun matlab-read-word-at-point 5162,190861
+(defun matlab-read-line-at-point 5185,191749
+(defun matlab-non-empty-lines-in-string 5207,192561
+(defun matlab-output-to-temp-buffer 5216,192794
+(defun matlab-shell-run-command 5230,193399
+(defun matlab-shell-describe-variable 5239,193779
+(defun matlab-shell-describe-command 5249,194258
+(defun matlab-shell-apropos 5263,194857
+(defun matlab-on-prompt-p 5273,195305
+(defun matlab-on-empty-prompt-p 5281,195537
+(defun matlab-shell-buffer-barf-not-running 5289,195798
+(defun matlab-shell-collect-command-output 5294,196012
+(defun matlab-shell-send-string 5342,197736
+(defun matlab-url-at 5351,198080
+(defun matlab-url-stack-top-at 5359,198320
+(defun matlab-shell-previous-matlab-url 5368,198632
+(defun matlab-find-other-window-file-line-column 5383,199158
+(defun matlab-find-other-window-via-url 5401,199851
+(defun matlab-shell-last-error 5418,200907
+(defun matlab-shell-html-click 5436,201774
+(defun matlab-shell-html-go 5442,201926
+(defun matlab-shell-dbstop-error 5448,202112
+(defun matlab-shell-dbclear-error 5454,202275
+(defun matlab-shell-demos 5460,202446
+(defun matlab-shell-close-figures 5465,202581
+(defun matlab-shell-close-current-figure 5470,202739
+(defun matlab-shell-exit 5475,202904
+(defcustom matlab-shell-topic-mode-hook 5484,203146
+(defvar matlab-shell-topic-current-topic 5489,203259
+(defun matlab-shell-topic-browser 5492,203369
+(defvar matlab-shell-topic-mouse-face-keywords5506,203903
+(defvar matlab-shell-topic-font-lock-keywords5516,204339
+(defvar matlab-shell-help-font-lock-keywords5524,204635
+(define-derived-mode matlab-shell-help-mode5545,205451
+(define-key matlab-shell-help-mode-map 5563,206175
+(define-key matlab-shell-help-mode-map 5564,206251
+(define-key matlab-shell-help-mode-map 5565,206323
+(define-key matlab-shell-help-mode-map5566,206380
+(define-derived-mode matlab-shell-topic-mode5585,207100
+(defun matlab-shell-topic-browser-create-contents 5611,208106
+(defun matlab-shell-topic-click 5625,208608
+(defun matlab-shell-topic-choose 5632,208819
+(defun matlab-shell-topic-mouse-highlight-subtopics 5660,209913
+(defun matlab-shell-topic-highlight-line 5677,210542
+(defun matlab-mode-determine-mfile-path 5702,211440
+(defcustom matlab-mode-install-path 5724,212308
+(defun matlab-find-file-under-path 5732,212727
+(defun matlab-find-file-on-path 5755,213567
+(defun matlab-find-file-click 5785,214771
+(defun matlab-show-line-info 5796,215132
+
+mlint.el,2407
+(defvar mlint-version 8,190
+(defvar mlint-platform36,1142
+(defcustom mlint-calculate-cyclic-complexity-flag 67,2230
+(defvar mlint-symtab-info 72,2375
+(defun mlint-programs-set-fcn 80,2737
+(defvar mlint-program-selection-fcn 88,3016
+(defvar mlint-program 91,3130
+(defun mlint-reset-program 95,3245
+(defcustom mlint-programs 111,3630
+(defcustom mlint-flags 119,3867
+(defconst mlint-output-regex124,4043
+(defconst mlint-symtab-line-regex128,4190
+(defcustom mlint-verbose 135,4553
+(defcustom mlint-scan-for-fixes-flag 140,4699
+(defvar mlint-error-id-fix-alist148,5011
+(defun mlint-column-output 163,5517
+(defun mlint-run 174,5899
+(defclass mlint-lm-group 270,9573
+(defclass mlint-lm-entry 274,9656
+(defun mlint-linemark-create-group 313,10856
+(defvar mlint-mark-group 329,11409
+(defun mlint-warningid->class 332,11503
+(defmethod linemark-new-entry 344,11883
+(defun mlint-end-of-something 357,12353
+(defmethod linemark-display 365,12569
+(defmethod mlint-is-fixable 423,14472
+(defmethod mlint-fix-entry 427,14613
+(defmethod mlint-fix-entry 433,14829
+(defclass mlint-lm-delete-focus 441,15061
+(defmethod mlint-fix-entry 447,15267
+(defclass mlint-lm-replace-focus 460,15634
+(defmethod initialize-instance 467,15851
+(defmethod mlint-fix-entry 475,16230
+(defclass mlint-lm-str2num 482,16449
+(defclass mlint-lm-entry-depricated 486,16577
+(defmethod initialize-instance 491,16768
+(defclass mlint-lm-entry-logicals 505,17418
+(defmethod mlint-fix-entry 511,17597
+(defclass mlint-lm-entry-unused-argument 523,18051
+(defmethod mlint-fix-entry 529,18236
+(defclass mlint-lm-quiet 543,18643
+(defmethod mlint-fix-entry 550,18829
+(defun mlint-highlight 559,19010
+(defun mlint-clear-warnings 576,19631
+(defun mlint-clear-nested-function-info-overlays 587,19986
+(defun mlint-clear-cross-function-variable-highlighting 598,20521
+(defun mlint-buffer 605,20818
+(defun mlint-next-buffer 621,21290
+(defun mlint-prev-buffer 630,21536
+(defun mlint-next-buffer-new 639,21783
+(defun mlint-prev-buffer-new 655,22347
+(defun mlint-show-warning 671,22913
+(defun mlint-fix-warning 679,23146
+(defun mlint-mark-ok 689,23454
+(defvar mlint-minor-mode-map708,23907
+(defvar mlint-overlay-map743,25356
+(defun mlint-emacs-popup-kludge 754,25813
+(defvar mlint-minor-mode-was-enabled-before 806,27377
+(defun mlint-ediff-metabuffer-setup-hook 810,27548
+(defun mlint-ediff-cleanup-hook 821,27917
+
+semantic-matlab.el,1234
+(defvar semantic-matlab-system-paths-include 50,1742
+(defvar semantic-matlab-root-directory55,2012
+(defun semantic-matlab-root-directory 75,2720
+(defvar semantic-matlab-match-function-re83,3014
+(defun semantic-matlab-function-tags 89,3319
+(defun semantic-matlab-parse-oldstyle-class 165,5849
+(defun semantic-matlab-find-oldstyle-classes 216,7614
+(defun semantic-matlab-parse-region 232,8168
+(defun semantic-matlab-parse-changes 250,8819
+(defun semantic-matlab-expand-tag 256,9042
+(defun semantic-matlab-parse-functions 264,9337
+(defun semantic-matlab-sort-raw-tags 271,9534
+(defconst semantic-matlab-type-hint-string 318,11224
+(defun semantic-matlab-parse-assignments 321,11340
+(define-mode-local-override semantic-get-local-variables424,15076
+(define-mode-local-override semantic-tag-components-with-overlays470,16349
+(define-mode-local-override semantic-format-tag-prototype 475,16530
+(defun semantic-idle-summary-format-matlab-mode 502,17580
+(defvar-mode-local matlab-mode 518,18238
+(defvar semantic-matlab-display-docstring 522,18416
+(define-mode-local-override semantic-ia-insert-tag525,18535
+(define-mode-local-override semantic-ctxt-current-symbol544,19242
+(defun semantic-default-matlab-setup 596,21082
+
+semanticdb-matlab.el,1199
+(defvar semanticdb-matlab-include-paths41,1392
+(defclass semanticdb-table-matlab 50,1676
+(defclass semanticdb-project-database-matlab55,1848
+(defvar-mode-local matlab-mode 69,2377
+(defvar-mode-local matlab-mode 76,2621
+(defmethod semanticdb-get-database-tables 84,2900
+(defmethod semanticdb-file-table 101,3683
+(defmethod semanticdb-get-tags 107,3932
+(defmethod semanticdb-equivalent-mode 114,4261
+(defmethod semanticdb-full-filename 122,4603
+(define-mode-local-override semanticdb-find-translate-path 135,5013
+(defvar semanticdb-matlab-system-files-cache 165,6105
+(defvar semanticdb-matlab-user-files-cache 172,6400
+(defvar semanticdb-matlab-user-class-cache 178,6659
+(defun semanticdb-matlab-reset-files-cache 181,6745
+(defun semanticdb-matlab-possibly-add-buffer-to-cache 187,6953
+(defun semanticdb-matlab-scan-directories209,7758
+(defun semanticdb-matlab-cache-files 238,8734
+(defun semanticdb-matlab-find-name 256,9461
+(define-mode-local-override semantic-ctxt-current-class-list276,10138
+(defmethod semanticdb-find-tags-by-name-method296,10717
+(defmethod semanticdb-find-tags-by-name-regexp-method322,11549
+(defmethod semanticdb-find-tags-for-completion-method335,12024
+
+tlc.el,629
+(defvar tlc-version 8,176
+(defun tlc-version 48,1534
+(defgroup tlc 53,1643
+(defvar tlc-syntax-table 57,1721
+(defvar tlc-mode-map70,2195
+(defvar tlc-font-lock-output-code 78,2408
+(defface tlc-font-lock-output-code81,2497
+(defcustom tlc-keywords92,2938
+(defvar tlc-font-lock-keywords114,3692
+(defun tlc-mode 134,4614
+(defun tlc-return 166,5734
+(defun tlc-indent 172,5842
+(defun tlc-calc-indentation 180,6040
+(defun tlc-calc-next-indentation 220,7244
+(defun tlc-beginning-of-statement 265,8561
+(defun tlc-line-special 276,8920
+(defun tlc-assignment-continuation-p 283,9119
+(defun tlc-in-multiline-comment 289,9329
+
+matlab-load.el,0
